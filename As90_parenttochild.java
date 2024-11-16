@@ -22,6 +22,9 @@ String s3=s2.next();
 String s4=s2.next();
 driver.close();
 Thread.sleep(2000);
+driver.switchTo().window(s4);
+
+
 
 	}
 

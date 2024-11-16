@@ -11,17 +11,17 @@ public class As87 {
 		// TODO Auto-generated method stub
 ChromeDriver driver=new ChromeDriver();
 driver.get("https://grotechminds.com/drag-and-drop/");
+driver.manage().window().maximize();
+
 WebElement e1=driver.findElement(By.xpath("//div[@id='container-6']"));
 WebElement e2=driver.findElement(By.xpath("//div[@id='div2']"));
 Actions a1=new Actions(driver);
 
 a1.dragAndDrop(e1,e2).perform();
-Thread.sleep(2000);
 
-		WebElement e3=driver.findElement(By.xpath("(//div/div/div[@class='w3-container '])[2]"));
-		WebElement e4=driver.findElement(By.xpath("//div/span/div[@id='container-6']"));
-		Actions a2=new Actions(driver);
-		a2.dragAndDrop(e3,e4).perform();
+a1.dragAndDrop(e2,e1).perform();
+		
+		
 	}
 
 }
